@@ -1,14 +1,14 @@
 const divContainer = document.querySelector(".div-container");
 let divisions = [];
 let numbering = [];
-let currentDimension = 16;
+let currentDimension = 64;
 let widthPerDimension = (500/currentDimension)+"px";
 
 divContainer.style.border = "black solid 2px"; 
 
- for(let i = 0; i <= 16; i++){
+ for(let i = 0; i <= currentDimension; i++){
     
-    for(let j = 1; j <= 16; j++){
+    for(let j = 1; j <= currentDimension; j++){
         
     
 
@@ -18,13 +18,19 @@ divContainer.style.border = "black solid 2px";
 
         divisions[i+j].style.backgroundColor = "red";
         divisions[i+j].style.width = widthPerDimension;
-        divisions[i+j].style.height = "100px";
+        divisions[i+j].style.height = widthPerDimension;
 
-        numbering[i+j] = document.createElement("p");
-        divisions[i+j].appendChild(numbering[i+j]);
-        numbering[i+j].textContent = j;
+        divisions[i+j].className = "grid-divs";
         
         console.log("as"+j);
     }
     console.log(i);
 }
+
+const allDivs = document.querySelectorAll(".grid-divs");
+
+allDivs.forEach(tempDiv =>{
+    tempDiv.addEventListener("mouseover", function(e){
+        tempDiv.style.backgroundColor = "green";
+    });
+});
