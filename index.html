@@ -8,8 +8,22 @@
     <script src="./javascript/script.js" defer></script>
 </head>
 <body>
-    <div class="div-container">
-        
+    <div class="container">
+        <div class="div-container">
+            
+        </div>
+        <div class="settings-container">
+            <div class="grid-size-container">
+                <input type="range" min="1" max="64" value="16" id="grid-size"> 
+                <p id="range-slider-number">16x16</p>
+            </div>
+            <div class="input-container">
+                <input type="color" id="pen-color" class="color-input">
+                <label for="pen-color">Drawing</label>
+                <input type="color" id="background-color" class="color-input">
+                <label for="pen-color">Background-Color</label>
+            </div>
+        </div>
     </div>
 </body>
 </html>
