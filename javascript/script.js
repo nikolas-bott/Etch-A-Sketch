@@ -33,7 +33,6 @@ slider.addEventListener("click", function(e){
     number.textContent = slider.value+"x"+slider.value;
 });
 
-divContainer.style.border = "black solid 2px"; 
 
 function test(){
     
